@@ -1,6 +1,7 @@
 import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Stack;
 
 
 public class Algorithm {
@@ -260,5 +261,19 @@ public class Algorithm {
     	} else {
     		return s;
     	}
+    }
+    
+    public static int fact_iter(int n){
+    	Stack<Integer> stack = new Stack<Integer>();
+    	if (n==0) return 1;
+    	while (n>0) {
+    		stack.push(n);
+    		n--;
+    	}
+    	int result= stack.pop();
+    	while (!stack.isEmpty()) {
+    		result= result*(stack.pop());
+    	}
+    	return result;
     }
 }

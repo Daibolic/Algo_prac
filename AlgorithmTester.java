@@ -164,5 +164,23 @@ public class AlgorithmTester {
 		test= Algorithm.compress(t);
 		assertEquals(correct,test);
 	}
+	
+	@Test
+	public void testFactIter() {
+		int correct= 1;
+		int test= Algorithm.fact_iter(0);
+		assertEquals(correct,test);
+		
+		test= Algorithm.fact_iter(1);
+		assertEquals(correct,test);
+		
+		correct= 6;
+		test= Algorithm.fact_iter(3);
+		assertEquals(correct,test);
+		
+		correct= 24;
+		test= Algorithm.fact_iter(4);
+		assertEquals(correct,test);
+	}
 
 }
